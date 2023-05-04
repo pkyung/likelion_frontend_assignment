@@ -5,7 +5,7 @@ for (let i = 2; i < 10; i++) {
     <span>
       ${i}X${j}=${i * j}
     </span>
-    <br></br>
+    <br>
     `)
   }
 }
