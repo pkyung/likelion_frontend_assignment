@@ -26,7 +26,7 @@ function calculator(num1, num2, op) {
       result.innerText = `${num1} % ${num2} = ${num1 % num2}`;
     }
   } else {
-    alert("연산자를 입력해주세요 .");
+    alert("올바른 연산자를 입력해주세요 .");
     location.reload();
   }
 }
