@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트 버튼</title>
+</head>
+<body>
+    <h1 id="number">0</h1>
+    <input type="button" value="증가" id="plus" onclick="btnplus()"/> 
+    <input type="button" value="리셋" id="reset" onclick="btnreturn()"/>
+
+    
+    <script type="text/javascript">
+        //let num = document.getElementById("number"); //중복 최대한 없도록, 간결하게 (else에도 있어서) //document는 html의 요소를 가져오는거
+        //요소의 속성값을 변경하기 위해서는 html의 속성을 사용해서 바꿔줘야함
+        //dom, 즉 document는 html의 문서를 건드리겠다는거!
+
+        //자바스크립트 html 속성값 변경 //자바랑 자바스크립트랑 다른 언어!
+        let num = 0 //자바에서는 변수 설정할 때 꼭 let, var, const와 같은걸로 선언해줘야함!! -> 안해줬더니 버튼 눌러도 증가가 안됨
+        function btnplus(){ //함수 이름을 위에걸로 써야되나..? 왜..?
+            num = num + 1;
+            document.getElementById("number").innerHTML = `${num}`; //"html 화면 js로 변경"라고 검색했더니 나옴
+            //화면상의 문자열을 변경하고 싶은 경우 innerHTML 프로퍼티 사용
+            //형태 -> document.getElementById("id 이름").innerHTML = 변경하고 싶은 내
+
+        }
+
+        function btnreturn(){
+            num = 0;
+            document.getElementById("number").innerHTML = `${num}`; //그냥 0으로 해줬더니 증가할 때 이어서 되어버림
+        }
+
+
+        //num.setAttribute('attribute_name속성', '값t'); 
+        //     num = num + 1
+        //     num.innerText = `${num}`;
+        //     document.write(num.innerText);
+        
+        
+        
+        
+                        
+    
+        //각각의 요소에 이벤트 하나씩만 넣어주면 되기 때문에 조건문 굳이 필요 없음
+        
+        // var num = 0
+        // var n //
+        // document.write(num)  
+        // if(){ //if문에는 조건식이 꼭 필요함
+        //     let p = document.getElementById("plus"); //document는 html의 요소를 자바로 가지고 옴
+        //     let n = document.getElementById("number"); //중복 최대한 없도록, 간결하게 (else에도 있어서)
+        //     num = num + 1;
+        //     n.innerText = num;
+        //     document.write(n.innerText)
+
+        //    // function plus(){ //위에 onclick뒤에 있는거랑 같아야 하나..?
+        // }
+
+        //     else{ //else는 조건식이 필요없음. 굳이 써줄 필요가 없어서
+        //     let r = document.getElementById("re");
+        //     let n = document.getElementById("number");
+        //     num = 0
+        //     document.write(num)
+
+        // } 컨트롤 슬래쉬 -> 전체 주석처리
+        //alt 누르고 위치 바꿀 수 있음. alt누르고 줄 여러개 선택해서 글자 추가 가능
+
+    </script>
+    
+</body>
+</html>
+
+<!--프로그래밍언어 쓰고 찾고 싶은 내용 적기. 한글 안나오면 영어로-->

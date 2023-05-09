@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 계산기</title>
+  
+</head>
+<body>
+    <h1>구구단</h1>
+    
+    <script type="text/javascript"> //<script>를 사용하여 자바스크립트를 html에 써 줌
+        
+        function multiplication(){
+            for(let j=2; j<10; ++j){
+                document.write("<br>")
+                document.write(j, "단 <br>") //줄바꿈코드를 이렇게 안에 넣어도 된다고..? //글자 크기 조절 css로 해야되나?
+                document.font
+                for(let i=1; i<10; i=++i){
+                    mul = j*i;
+                    document.write(j ,"*" ,i ,"=" ,mul, "<br>"); 
+                                        
+                }
+            }
+         }
+
+
+        // document.write(multiplication); 이렇게 하니까 안에 있는 내용이 그대로 다 나와버림. 왜지?
+        multiplication()
+        
+     </script>
+    
+
+</body>
+</html>
