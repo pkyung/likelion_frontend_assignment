@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="num" style="text-align: center">0</h1>
+    <div style="text-align: center">
+      <button id="increaseBtn" onclick="increase()">증가</button>
+      <button id="resetBtn" onclick="reset()">리셋</button>
+    </div>
+
+    <script>
+      var count = 0;
+      function increase() {
+        count = count + 1;
+        document.querySelector("#num").textContent = count;
+      }
+      function reset() {
+        document.querySelector("#num").textContent = 0;
+      }
+    </script>
+  </body>
+</html>
