@@ -1,0 +1,50 @@
+body{
+    background-color: wheat;
+}
+h1 {
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.bigcontainer {
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    
+}
+
+.bigcontainer section {
+    border-radius: 10pt;
+}
+
+.container{
+    width: 300px; height: 600px; margin :auto;
+    background-color: whitesmoke;
+    color:purple;
+    text-decoration: solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.container1{
+    width: 300px; height: 600px; margin :auto;
+    background-color: whitesmoke;
+    color:purple;
+    text-decoration: solid;  
+
+}
+.container2{
+    width: 300px; height: 600px; margin :auto;
+    background-color: whitesmoke;
+    color:purple;
+    text-decoration: solid;   
+
+}
+footer{
+    text-align: center;
+    color: darkgoldenrod;
+}
