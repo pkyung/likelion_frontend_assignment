@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>카운트 버튼</title>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
+    <h1 id="num">0</h1>
+    <div>
+        <button onclick="up()">증가</button>
+        <button onclick="reset()">리셋</button>
+    </div>
     
     <script>
-        
+        let i = 0;
+        let num = document.getElementById('num');
+        num.innerHTML = i;
+
+        let up = () => {num.innerHTML = ++i;};
+
+        let reset = () => {i = 0; num.innerHTML = i;};
     </script>
 </body>
 </html>
