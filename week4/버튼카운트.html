@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <div style="text-align: center";>
+    <h1><div id='result'>0</div></h1>
+    <input type='button'
+    onclick='count("plus")'
+    value='증가'/>
+<input type='button'
+    onclick='count("reset")'
+    value='리셋'/>
+<script>
+    function count(type)  {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById('result');
+  
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+  
+  // 더하기/리셋
+  if(type === 'plus') {
+    number = Number(number) + 1;
+  }else if(type === 'reset')  {
+    number = Number(number) * 0;
+  }
+  
+  // 결과 출력
+  resultElement.innerText = number;
+}
+</script>
+</body>
+</html>
