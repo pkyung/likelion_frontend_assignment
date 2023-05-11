@@ -1,6 +1,6 @@
 첫 번째 과제 : 키보드 이벤트 게임 만들기
 
-두 번쨰 과제 : 가위바위보 프로그램 만들기
+두 번째 과제 : 가위바위보 프로그램 만들기
 
 실행 화면 
 <img src="https://github.com/pkyung/likelion_frontend_assignment/assets/81898507/41f92e83-595c-4ec0-b175-4228626e80b9">
