@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!--웹 문서의 유형을 html로 지정-->
+
+<html>
+    <head> <!--브라우저의 정보-->
+        <meta charset="UTF-8"> <!--한글 깨지지 않도록-->
+        <title>자기소개서</title> <!--사이트 이름 설정-->
+        <script src="https://kit.fontawesome.com/d291a023bc.js" crossorigin="anonymous"></script> <!--사이트 불러옴-->
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    
+    <body bgcolor="#FFE4E1" > <!--문서 내용 입력-->
+    
+    <header> <!--header는 홈페이지 상 윗부분에 해당하는 곳이라고 알려줌-->
+        <div id="nav_menu">
+            <h1 class="title">Yeong ju</h1>
+            <nav> <!--nav는 다른 부분과 연결되는 내비게이션 링크들의 집합을 정의할 때 사용됨-->
+            <ul class="menu" > <!--ul태그는 순서가 없는 블릿 리스트-->       
+                <li ><a href="#">Contact</a></li> <!--li는 ul 아래의 항목들 의미-->
+                <li ><a href="#">About me</a></li> <!--a는 메뉴를 클릭할 때 이동할 수 있게끔 만들어 주려고 함-->
+                <li ><a href="#">Interest</a></li>
+                <li ><a href="#">Tmi</a></li>
+            </ul>
+            </nav> 
+        </div>
+    </header>   
+        
+
+
+        <br>
+
+
+        <hr style="color: black;"> <!--구분선 넣어줌-->
+        
+        <center>
+        <h2 style="font-size: 40px;"><span style="color: #fd8c8c;">Contact</span></h2>
+
+        <br><br>  <!--줄바꿈 태그 사용-->
+
+        <i class="fa-brands fa-instagram fa-10x"></i>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--띄워쓰기-->
+        <i class="fa-solid fa-comment fa-10x"></i>
+        <br>
+         <a href="https://instagram.com/juju___o.z?igshid=YmMyMTA2M2Y=" style="font-family: 'omyu_pretty';">Instagram</a> <!--a를 사용하여 링크 삽입함-->
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="카카오톡.jpg" style="font-family: 'omyu_pretty';">Kakao talk</a>
+        <br><br><br>
+        
+        </center>
+
+        <hr style="color: black;">
+
+        <center>
+        <h2 style="font-size: 40px;"><span style="color: #fd8c8c;">About me</span></h2>
+        
+        <img src="부산.jpg" alt="자기 소개 사진" width="350" height="350" id="mypic">   <!--img이용하여 사진 삽입함-->
+       
+        <br><br>
+        <input type="button" value="이름" id="name" class="buttonstyle" onclick="btnname()"/>
+        <P id = name1 class="buttonline">💗💗</P> <!--단락-->
+        <br><br>
+        
+        <input type="button" value="나이" id="age" class="buttonstyle" onclick="btnage()"/>
+        <P id="age1" class="buttonline">💛💛</P>
+        <br><br>
+        
+        <input type="button" value="학과" id="school" class="buttonstyle" onclick="btnschool()"/>
+        <P id="school1" class="buttonline">💜💜</P>
+        <br><br>
+        
+        <input type="button" value="전화번호" id="phone" class="buttonstyle"onclick="btnphone()"/>
+        <P id="call1" class="buttonline">💙💙</P>
+
+        <br><br>
+
+        <hr style="color: black;">
+
+
+
+        <!-- INTEREST -->
+        <h2 style="font-size: 40px;"><span style="color: #fd8c8c;">Interest</span></h2>
+
+        <br>
+
+        <P1 class="hobby">1. 빵 만들기🍞🥨</P1>
+        <br><br>
+        <img src="큐브케이크.jpg" alt="자기 소개 사진" width="200" height="250" class="cake">
+        <img src="기념일 케이크.jpg" alt="자기 소개 사진" width="250" height="250" class="cake">
+        <img src="프레첼.jpg" alt="자기 소개 사진" width="200" height="250" class="cake">
+        <img src="처음 케이크.jpg" alt="자기 소개 사진" width="200" height="250" class="cake">
+        <img src="100케이크.jpg" alt="자기 소개 사진" width="200" height="250" class="cake">
+        <br><br><br><br>
+
+        <P class="hobby">2. 디저트 먹방🍩</P>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Hqbg3_5--yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br><br><br>
+
+        <p class="hobby" >3. 잠 자기</p>
+        <p style="font-size: 100px;">😴</p>
+
+        <br>
+
+        <hr style="color: black;">
+
+        <!-- TMI -->
+        <h2 style="font-size: 40px;"><span style="color: #fd8c8c;">Tmi</span></h2>
+        <p class="tmi"> 🌸23학번 새내기🌸 </p>
+        <p class="tmi">🥩돈가스 엄청 좋아함(+🍟튀긴거)</p>
+        <img src="돈가스1.jpg" alt="자기 소개 사진" width="200" height="250" class="don">
+        <img src="돈가스22.jpg" alt="자기 소개 사진" width="200" height="250" class="don">
+        <img src="돈가스3.jpg" alt="자기 소개 사진" width="200" height="250" class="don">
+        <img src="돈가스4.jpg" alt="자기 소개 사진" width="200" height="250" class="don">
+        <img src="돈가스5.jpg" alt="자기 소개 사진" width="200" height="250" class="don">        
+        <p class="tmi">🍰케이크도 좋아함🍰</p>
+        <P class="tmi">❤mbti: isfp❤</P>
+       
+
+        <br>
+    </center>
+
+    </body>
+
+
+    <footer>
+        <P>copyright 2023 All right reserved by songyeongju</P>
+        <p>Mail : syj7632@naver.com</p>
+    </footer>
+</html>
