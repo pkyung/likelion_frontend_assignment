@@ -3,22 +3,16 @@ const character = document.querySelector('img')
 let x = 0
 let y = 0
 
+const arrow = {
+  ArrowRight: () => `translate(${(x += 10)}px, ${y}px)`,
+  ArrowLeft: () => `translate(${(x -= 10)}px, ${y}px)`,
+  ArrowUp: () => `translate(${x}px, ${(y -= 10)}px)`,
+  ArrowDown: () => `translate(${x}px, ${(y += 10)}px)`,
+}
+
 const moveHandler = e => {
   const key = e.key
-  switch (key) {
-    case 'ArrowRight':
-      character.style.transform = `translate(${(x += 10)}px, ${y}px)`
-      break
-    case 'ArrowLeft':
-      character.style.transform = `translate(${(x -= 10)}px, ${y}px)`
-      break
-    case 'ArrowUp':
-      character.style.transform = `translate(${x}px, ${(y -= 10)}px)`
-      break
-    case 'ArrowDown':
-      character.style.transform = `translate(${x}px, ${(y += 10)}px)`
-      break
-  }
+  character.style.transform = arrow[key]()
 }
 
 const init = () => {
