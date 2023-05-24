@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Title{
+    text-align : center;
+    background-color: black;
+    color: white;
+
+}
+
+.user{
+    float:left;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.computer{
+    float:right;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+
+.tong{
+    display : flex;
+    height: 500px;
+}
+.name{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-image: linear-gradient(to right, pink 50%, #00ffff 50%);
+    margin: 0%;
+}
+
+.pic{
+    display: flex;
+    justify-content: space-between;
+    height : 100px;
+}
+
