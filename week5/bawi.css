@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.container {
+  text-align: center;
+  display: flex;
+}
+.computer {
+  background-color: salmon;
+  width: 50%;
+}
+.user {
+  background-color: skyblue;
+  width: 50%;
+}
+
+.gibgayo {
+  display: flex;
+}
+
+#computercontainer {
+  text-align: center;
+  width: 50%;
+}
+#usercontainer {
+  text-align: center;
+  width: 50%;
+}
+
+.gawigawibocenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
