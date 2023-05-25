@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img id="img" src="character.png" alt="Img" style="width:100px; height:100px;">
+  
+    <script>
+        var image = document.getElementById('img'); // Corrected 'id' value
+        var imageLeft = 0;
+        var imageTop = 0;
+  
+        function moveImage(direction) {
+            switch (direction) {
+                case 'ArrowUp':
+                    imageTop -= 10;
+                    break;
+                case 'ArrowDown':
+                    imageTop += 10;
+                    break;
+                case 'ArrowLeft':
+                    imageLeft -= 10;
+                    break;
+                case 'ArrowRight':
+                    imageLeft += 10;
+                    break;
+                default:
+                    return; // Do nothing for other keys
+            }
+  
+            image.style.top = imageTop + 'px';
+            image.style.left = imageLeft + 'px';
+        }
+  
+        document.addEventListener('keydown', function(event) {
+            moveImage(event.key);
+        });
+    </script>
+</body>
+</html>
