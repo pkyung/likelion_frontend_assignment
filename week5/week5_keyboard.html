@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트 게임</title>
+
+    <style> 
+        .character_icon{width: 50px;
+        height: 50px;
+
+        position: absolute;
+        -moz-transform: scaleX();
+    
+    }
+        
+        body {position: relative;}
+
+        img {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <img src="https://raw.githubusercontent.com/pkyung/likelion_frontend_assignment/main/week5/image/character.png" class="character_icon" alt="character">
+
+    <script>
+    const init = () => {
+        var character = document.querySelector(".character_icon"); //아이콘 정의
+        var x = 0; // x 초기 위치
+        var y = 0; // y 초기 위치
+        var step = 10; //이동 크기                         
+        
+
+        function moveLeft() { 
+            x -= step;
+            character.style.left = x + "px"; //style.left 프로퍼티를 통해 이미지 객체의 위치로 줌
+        }
+
+        function moveRight() { 
+            x += step;
+            character.style.left = x + "px"; //style.left 프로퍼티를 통해 이미지 객체의 위치로 줌
+        }
+
+        function moveDown() { 
+            y += step;
+            character.style.top = y + "px"; 
+            character.style.zIndex = 1000;
+        }
+
+        function moveUp() { 
+            y -= step;
+            character.style.top = y + "px"; 
+        }
+
+        document.addEventListener("keydown",(e) => {
+            e.preventDefault(); // 이건 뭐지?
+            if (e.keyCode === 37) {moveLeft();} //함수 실행                                         
+            else if (e.keyCode === 38) {moveUp();}
+            else if (e.keyCode === 39) {moveRight();}
+            else if (e.keyCode === 40) {moveDown();}
+        });
+    }
+
+    init();
+   
+        //const ArrowLeft = document.addEventListener('keydown',function(){ArrowLeft = event.key})
+    
+        //document.addEventListener('keydown',function(evernt){
+        //    if (keycode == ArrowLeft){console.log('키 눌림'+event.key);};
+        //    console.log('키 눌림'+event.code);
+        //    console.log(keycode)});   
+    
+    
+    </script>
+</body>
+
+</html>

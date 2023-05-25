@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임 만들기</title>
+    <script src="week5_game.js"></script>
+    <style>
+        #title {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            height: 60px;
+        }
+
+        #cos {background-color: rgb(77, 202, 247);}
+        #com {background-color: rgb(243, 115, 104);}
+        
+       #container {
+        overflow: hidden;}
+
+       #container div {
+        width: 50%;
+        height: 30px;
+        float: left;
+        text-align: center;}
+
+        #print_img img {
+        width: 50%;
+        height: 300px;
+        float: left;
+        text-align: center;}
+
+        #click_img div {
+            float: left;
+            justify-content: space-around;
+        }
+
+        #rock_pic {cursor: pointer;} /*마우스오버 시 커서 모양 변경 속성*/
+        #scissors_pic {cursor: pointer;} /*마우스오버 시 커서 모양 변경 속성*/
+        #paper_pic {cursor: pointer;} /*마우스오버 시 커서 모양 변경 속성*/
+
+   
+    </style>
+
+</head>
+<body>
+    <header>
+        <div id="title">가위바위보 프로그램</div>
+        <div id="container">
+            <div id="cos">사용자</div>
+            <div id="com">컴퓨터</div>
+        </div>
+    </header>
+
+
+    <div id="print_img">
+        <img width="300" height="300" id="consumer_pic">
+        <img width="300" height="300" id="computer_pic">
+        
+    </div>
+
+    <div id="click_img">
+        <div><img onclick="event_rock()" src="rock.jpg" width="200" height="200" id="rock_pic"></div>
+        <div><img onclick="event_scissors()" src="scissors.jpg" width="200" height="200" id="scissors_pic"></div>
+        <div><img onclick="event_paper()" src="paper.jpg" width="200" height="200" id="paper_pic"></div>
+    </div>
+    
+    
+</body>
+</html>
+
+<!-- css로 화면 구성 더 보완해야함,,, -->
