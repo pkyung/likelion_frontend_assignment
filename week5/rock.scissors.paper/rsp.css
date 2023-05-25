@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+}
+
+#me {
+    background-color: skyblue;
+}
+
+#computer {
+    background-color: pink;
+}
+
+#choice {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20%;
+}
+
+#choice > img {
+    width: 80px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+
+}
+
+#result > img {
+    width: 25%;
+    margin: 50px;
+}
