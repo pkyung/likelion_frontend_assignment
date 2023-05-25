@@ -1,0 +1,63 @@
+body {
+  width: 100vw;
+  height: 200vh;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 50px;
+  /* overflow-x: hidden; */
+  /* x축 일정 크기 넘어가면 그냥 화면에서 지운다.즉 가로축 스크롤바가 사라진다. */
+}
+
+.title {
+  text-align: center;
+  /* 글자 가운데로 */
+  font-family: "Caveat", cursive;
+  color: palevioletred;
+}
+
+.introduce {
+  width: 100vw;
+  height: 100vh;
+  /* vw vh는 px,rem과 같이 단위인데 뷰포인트wid,hei로 화면줄이면 같이 줄어드는것을 확인가능  */
+  display: flex;
+  justify-content: space-around;
+  /* 사진과 왼쪽 글자들을 같은 크기로 정렬 */
+  align-items: center;
+  /* flex일때 세로방향 중앙으로  */
+}
+
+.introduceImg {
+  width: 20vw;
+  height: 20vw;
+}
+
+.introduceText {
+  color: palevioletred;
+}
+
+.introduceTextFirst {
+  margin: 2vh 0;
+  /* 패딩과의 차이  */
+  font-size: 2vw;
+  font-weight: 500;
+  /* 글자 굵기 */
+}
+
+.introduceTextSecond {
+  margin: 2vh 0;
+  font-size: 6vw;
+  font-weight: 700;
+}
+
+.introduceTextThird {
+  margin: 2vh 0;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+.introduceTextFourth {
+  margin: 2vh 0;
+  font-size: 2vw;
+  font-weight: 500;
+  font-family: "Caveat", cursive;
+}
