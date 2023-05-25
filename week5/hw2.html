@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>가위바위보 프로그램</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      h1 {
+        margin-top: 0;
+        background-color: black;
+        color: aliceblue;
+        font-size: large;
+        padding: 10px;
+        margin-bottom: 0;
+      }
+
+      #game-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 50px; */
+      }
+
+      #user-choice,
+      #computer-choice {
+        flex: 1;
+        padding: 20px;
+      }
+
+      #user-choice img,
+      #computer-choice img {
+        width: 500px;
+        height: 500px;
+      }
+
+      #computer-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #computer {
+        flex: 1;
+        background-color: palevioletred;
+        padding: 10px;
+      }
+      #user {
+        flex: 1;
+        background-color: skyblue;
+        padding: 10px;
+      }
+      #buttons-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가위바위보 프로그램</h1>
+    <div id="computer-user">
+      <div id="user">사용자</div>
+      <div id="computer">컴퓨터</div>
+    </div>
+    <div id="game-container">
+      <div id="user-choice"></div>
+      <div id="computer-choice"></div>
+    </div>
+    <div id="buttons-container">
+      <img
+        src="./image/scissors.jpg"
+        alt="scissors"
+        onclick="playGame('scissors')"
+      />
+      <img src="./image/rock.jpg" alt="rock" onclick="playGame('rock')" />
+      <img src="./image/paper.jpg" alt="paper" onclick="playGame('paper')" />
+    </div>
+
+    <script>
+      function playGame(userChoice) {
+        var choices = ["scissors", "rock", "paper"];
+        var computerChoice = choices[Math.floor(Math.random() * 3)];
+
+        document.getElementById(
+          "user-choice"
+        ).innerHTML = `<img src="./image/${userChoice}.jpg" alt="${userChoice}">`;
+        document.getElementById(
+          "computer-choice"
+        ).innerHTML = `<img src="./image/${computerChoice}.jpg" alt="${computerChoice}">`;
+      }
+    </script>
+  </body>
+</html>
