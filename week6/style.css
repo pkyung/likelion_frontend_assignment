@@ -1,0 +1,17 @@
+table {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: blue;
+}
+
+.price {
+  color: red;
+}
+
+td {
+  text-align: center;
+  width: 200px;
+}

@@ -1,0 +1,14 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  width: 40px;
+  left: 0px;
+}
+.stop {
+  background-position: 0px 0px;
+}
