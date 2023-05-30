@@ -1,0 +1,22 @@
+.parentElement {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#list {
+  width: 25%;
+}
+
+p {
+  text-align: center;
+}
+
+.information {
+  color: blue;
+  font-weight: bold;
+}
+
+.information1 {
+  color: red;
+  font-weight: bold;
+}
