@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>힘들다 힘들어</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="6주차_과제.css">
+</head>
+<body>
+
+    <div class = "book1_img"></div>
+    <div class = "book1_text"></div>
+
+    <div class = "book2_img"></div>
+    <div class = "book2_text"></div>
+
+    <div class = "book3_img"></div>
+    <div class = "book3_text"></div>
+
+    <div class = "book4_img"></div>
+    <div class = "book4_text"></div>
+
+    <div class = "book5_img"></div>
+    <div class = "book5_text"></div>
+
+
+    <script>
+        $.ajax({
+            type:"GET",
+            url: "https://api.itbook.store/1.0/new",
+            data: {},
+            success: function(response){
+
+                const book1_img = document.querySelector(".book1_img")
+                const book1_text = document.querySelector(".book1_text")
+                const book2_img = document.querySelector(".book2_img")
+                const book2_text = document.querySelector(".book2_text")
+                const book3_img = document.querySelector(".book3_img")
+                const book3_text = document.querySelector(".book3_text")
+                const book4_img = document.querySelector(".book4_img")
+                const book4_text = document.querySelector(".book4_text")
+                const book5_img = document.querySelector(".book5_img")
+                const book5_text = document.querySelector(".book5_text")
+
+
+                for(var i = 0; i < 4; i++){
+                    const json_row = response["books"][i]
+
+                    let a = document.createElement("a")
+                    a.setAttribute("href",json_row["url"])
+                    book1_img.appendChild(a)
+
+                    let newimg = document.createElement("img")
+                    newimg.setAttribute("src",json_row["image"])
+                    a.appendChild(newimg)
+                   
+                    let newspan = document.createElement("span")
+                    book1_text.appendChild(newspan)
+
+                    let p1 = document.createElement("p")
+                    let newText = document.createTextNode(json_row["title"])
+                    p1.appendChild(newText)
+                    newspan.appendChild(p1)
+
+                    let p2 = document.createElement("p")
+                    let newText2 = document.createTextNode(json_row["price"])
+                    p2.appendChild(newText2)
+                    newspan.appendChild(p2)
+            }
+
+                for(var i = 4; i < 8; i++){
+                    const json_row = response["books"][i]
+
+                    let a = document.createElement("a")
+                    a.setAttribute("href",json_row["url"])
+                    book2_img.appendChild(a)
+
+                    let newimg = document.createElement("img")
+                    newimg.setAttribute("src",json_row["image"])
+                    a.appendChild(newimg)
+
+                    let newspan = document.createElement("span")
+                    book2_text.appendChild(newspan)
+
+                    let p1 = document.createElement("p")
+                    let newText = document.createTextNode(json_row["title"])
+                    p1.appendChild(newText)
+                    newspan.appendChild(p1)
+
+                    let p2 = document.createElement("p")
+                    let newText2 = document.createTextNode(json_row["price"])
+                    p2.appendChild(newText2)
+                    newspan.appendChild(p2)
+            }
+
+
+            for(var i = 8; i < 12; i++){
+                const json_row = response["books"][i]
+
+                    let a = document.createElement("a")
+                    a.setAttribute("href",json_row["url"])
+                    book3_img.appendChild(a)
+
+                    let newimg = document.createElement("img")
+                    newimg.setAttribute("src",json_row["image"])
+                    a.appendChild(newimg)
+
+                    let newspan = document.createElement("span")
+                    book3_text.appendChild(newspan)
+
+                    let p1 = document.createElement("p")
+                    let newText = document.createTextNode(json_row["title"])
+                    p1.appendChild(newText)
+                    newspan.appendChild(p1)
+
+                    let p2 = document.createElement("p")
+                    let newText2 = document.createTextNode(json_row["price"])
+                    p2.appendChild(newText2)
+                    newspan.appendChild(p2)
+            }
+
+
+            for(var i = 12; i < 16; i++){
+                const json_row = response["books"][i]
+
+                let a = document.createElement("a")
+                a.setAttribute("href",json_row["url"])
+                book4_img.appendChild(a)
+
+                let newimg = document.createElement("img")
+                newimg.setAttribute("src",json_row["image"])
+                a.appendChild(newimg)
+
+                let newspan = document.createElement("span")
+                book4_text.appendChild(newspan)
+
+                let p1 = document.createElement("p")
+                let newText = document.createTextNode(json_row["title"])
+                p1.appendChild(newText)
+                newspan.appendChild(p1)
+
+                let p2 = document.createElement("p")
+                let newText2 = document.createTextNode(json_row["price"])
+                p2.appendChild(newText2)
+                newspan.appendChild(p2)
+            }
+
+
+            for(var i = 16; i < 20; i++){
+                const json_row = response["books"][i]
+
+                let a = document.createElement("a")
+                a.setAttribute("href",json_row["url"])
+                book5_img.appendChild(a)
+
+                let newimg = document.createElement("img")
+                newimg.setAttribute("src",json_row["image"])
+                a.appendChild(newimg)
+
+                let newspan = document.createElement("span")
+                book5_text.appendChild(newspan)
+
+                let p1 = document.createElement("p")
+                let newText = document.createTextNode(json_row["title"])
+                p1.appendChild(newText)
+                newspan.appendChild(p1)
+
+                let p2 = document.createElement("p")
+                let newText2 = document.createTextNode(json_row["price"])
+                p2.appendChild(newText2)
+                newspan.appendChild(p2)
+            }
+        }});
+    </script>
+</body>
+</html>
