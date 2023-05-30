@@ -1,3 +1,6 @@
+const handleGoToUrl = (book) => {
+    window.location.href = book
+}
 
 $.ajax({
     type: "GET",
@@ -21,16 +24,25 @@ $.ajax({
         const image = document.createElement("img");
         image.src = book.image;
         bookDiv.appendChild(image);
+        image.addEventListener('click', () => {
+          handleGoToUrl(book.url)  
+        })
   
         // 책 제목 추가
         const title = document.createElement("h3");
         title.textContent = book.title;
         bookDiv.appendChild(title);
+        title.addEventListener('click', () => {
+            handleGoToUrl(book.url)
+        })
   
         // 가격 추가
         const price = document.createElement("p");
         price.textContent = "가격: " + book.price;
         bookDiv.appendChild(price);
+        price.addEventListener('click', () => {
+            handleGoToUrl(book.url)
+        })
   
         // 부모 요소에 추가,appendChild
         parentElement.appendChild(bookDiv);
