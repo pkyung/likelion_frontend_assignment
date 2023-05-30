@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./book_list.css">
+</head>
+<body>
+    <div id="all"></div>
+    <!-- <img src="" alt=""> -->
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "https://api.itbook.store/1.0/new",
+            data: {},
+            success: function(response){
+                const book_list = response["books"];
+                for(let i = 0; i < 20; i++) {
+                    let body = document.body;
+                    let div = document.querySelector('div');
+
+                    let container = document.createElement('div');
+                    container.setAttribute('id', 'container');
+                    container.addEventListener('click', function() {
+                        window.location.href = `${book_list[i]["url"]}`;
+                    });
+                    div.appendChild(container);
+
+                    let img = document.createElement('img');
+                    img.setAttribute('src', `${book_list[i]["image"]}`);
+                    
+                    let title = document.createElement('p');
+                    title.setAttribute('id', 'title');
+                    let title_t = document.createTextNode(`${book_list[i]["title"]}`);
+                    title.appendChild(title_t);
+                    
+                    let price = document.createElement('p');
+                    price.setAttribute('id', 'price');
+                    let price_t = document.createTextNode(`${book_list[i]["price"]}`);
+                    price.appendChild(price_t);
+                    
+                    container.appendChild(img);
+                    container.appendChild(title);
+                    container.appendChild(price);
+                   
+                };
+                
+                console.log(response)
+            }});
+    </script>
+</body>
+</html>
