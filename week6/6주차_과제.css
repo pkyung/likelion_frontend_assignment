@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.book1_img{
+    display : flex;
+    justify-content : space-between;
+
+}
+
+.book1_text{
+
+    display : flex;
+    justify-content : space-between;
+    text-align: center; 
+
+}
+.book2_img{
+    display : flex;
+    justify-content : space-around;
+
+}
+.book2_text{
+    display : flex;
+    justify-content : space-around;
+    text-align: center;
+}
+.book3_img{
+    display : flex;
+    justify-content : space-around;
+
+}
+.book3_text{
+    display : flex;
+    justify-content : space-around;
+    text-align: center;
+    font-size : 15px;
+}
+.book4_img{
+    display : flex;
+    justify-content : space-around;
+
+}
+.book4_text{
+    display : flex;
+    justify-content : space-around;
+    text-align: center;
+
+}
+.book5_img{
+    display : flex;
+    justify-content : space-around;
+
+}
+.book5_text{
+    display : flex;
+    justify-content : space-around;
+    text-align: center;
+}
