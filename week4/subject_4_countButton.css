@@ -1,0 +1,9 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#div1 {
+  display: flex;
+  justify-content: center;
+}

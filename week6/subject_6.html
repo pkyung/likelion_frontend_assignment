@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="parentElement"></div>
+    <script>
+      let parent = document.querySelector(".parentElement");
+      let childElement = null;
+      $.ajax({
+        type: "GET",
+        url: "https://api.itbook.store/1.0/new",
+        data: {},
+        dataType: "json",
+        success: function (response) {
+          const books = response.books;
+          for (let i = 0; i < books.length; i++) {
+            childElement = document.createElement("div");
+            childElement.className = "childElement" + i;
+            parent.append(childElement);
+            let book = books[i];
+            let image = book.image;
+            let title = book.title;
+            let price = book.price;
+            let url = book.url;
+            let list = document.querySelector(`.childElement${i}`);
+            childElement.setAttribute("id", "list");
+            const first = list.firstElementChild;
+            let newP = document.createElement("p");
+            let newText = document.createTextNode(title);
+            newP.appendChild(newText);
+            list.appendChild(newP);
+
+            const second = list.secondElementChild;
+            let newP1 = document.createElement("p");
+
+            let newText1 = document.createTextNode(price);
+            newP1.appendChild(newText1);
+
+            const img = document.createElement("img");
+            img.classList.add("IMG");
+            img.setAttribute("src", `${image}`);
+            list.appendChild(img);
+            newP.appendChild(newText);
+            list.appendChild(newP);
+            list.appendChild(newP1);
+            newP.setAttribute("class", "information");
+            newP1.setAttribute("class", "information1");
+
+            img.addEventListener("click", () => {
+              window.location.href = url;
+            });
+            newP.addEventListener("click", () => {
+              window.location.href = url;
+            });
+            newP1.addEventListener("click", () => {
+              window.location.href = url;
+            });
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
