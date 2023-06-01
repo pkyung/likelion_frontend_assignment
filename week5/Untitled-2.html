@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <input type = "button" onclick = "javascript:ajax()" value = "제출" />
+        <div><table id = "boardList" border = "1"></table></div>
+    </body>
+<script>
+function createTable(){
+    
+    var param = {};
+    param.BoardVo.bdId = "01111";
+    param = JSON.stringify(param);
+
+    $.ajax({
+        url : "/getBoardList.do",
+        data : param,
+        type : 'post',
+        success : function(data){
+            var results = data.boardList;
+            var str = '<TR>';
+            $.each(results , function(i){
+                str += '<TD>' + results[i].bdTitl + '</TD><TD>' + results[i].bdWriter + '</TD><TD>' + results[i].bdRgDt + '</TD>';
+                str += '</TR>';
+           });
+           $("#boardList").append(str); 
+        },
+        error : function(){
+            alert("error");
+        }
+    });
+}
+
+</script>
+</body>
+</html>

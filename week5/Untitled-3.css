@@ -1,0 +1,29 @@
+*{
+    object-fit: cover;
+}
+
+.header{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    line-height:100px
+}
+.user{
+    text-align: center;
+    background-color: blue;
+    font-size: 32px;
+}
+
+.computer{
+    text-align: center;
+    background-color: pink;
+    font-size: 32px;
+}
+.userimg{
+    height: 500px;
+    text-align: center;
+}
+
+.computerimg{
+    height: 500px;
+    text-align: center;
+}
