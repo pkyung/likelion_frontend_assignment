@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #amongUS {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="amongUS" src="./image/character.png" alt="" />
+    <script>
+      (function () {
+        document.addEventListener("keydown", function (e) {
+          let key = e.keyCode;
+          let amongUS = document.getElementById("amongUS");
+          let y = parseInt(amongUS.style.top || 0, 10);
+          let x = parseInt(amongUS.style.left || 0, 10);
+
+          if (key === 37 /* LEFT */) {
+            amongUS.style.left = x - 50 + "px";
+          }
+          if (key === 38 /* TOP */) {
+            amongUS.style.top = y - 50 + "px";
+          }
+          if (key === 39 /* RIGHT */) {
+            amongUS.style.left = x + 50 + "px";
+          }
+          if (key === 40 /* BOTTOM */) {
+            amongUS.style.top = y + 50 + "px";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

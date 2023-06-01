@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Information</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      img {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="bookTable"></table>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+      function createBookElement(book) {
+        const { image, title, price, url } = book;
+
+        const cell = document.createElement("td");
+
+        // Create the book image element
+        const imageElement = document.createElement("img");
+        imageElement.src = image;
+        imageElement.addEventListener("click", () => {
+          window.open(url, "_blank");
+        });
+        cell.appendChild(imageElement);
+
+        // Create the book title element
+        const titleElement = document.createElement("p");
+        titleElement.textContent = title;
+        titleElement.addEventListener("click", () => {
+          window.open(url, "_blank");
+        });
+        cell.appendChild(titleElement);
+
+        // Create the book price element
+        const priceElement = document.createElement("p");
+        priceElement.textContent = price;
+        priceElement.addEventListener("click", () => {
+          window.open(url, "_blank");
+        });
+        cell.appendChild(priceElement);
+
+        return cell;
+      }
+
+      function displayBooks(books) {
+        const table = document.getElementById("bookTable");
+
+        for (let i = 0; i < 5; i++) {
+          const row = document.createElement("tr");
+
+          for (let j = 0; j < 4; j++) {
+            const book = books[i * 4 + j];
+            const cell = createBookElement(book);
+            row.appendChild(cell);
+          }
+
+          table.appendChild(row);
+        }
+      }
+
+      // Fetch data from the API
+      fetch("https://api.itbook.store/1.0/new")
+        .then((response) => response.json())
+        .then((data) => {
+          const books = data.books.slice(0, 20); // Get the first 20 books
+          displayBooks(books);
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
