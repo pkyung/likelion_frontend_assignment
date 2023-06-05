@@ -1,0 +1,92 @@
+@media only screen and (max-width: 768px) {
+  .wrap {
+    display: block;
+  }
+
+  .sidebar {
+    height: auto;
+  }
+
+  .sidebar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar__profile {
+    width: 125px;
+    height: auto;
+    margin-right: 14px;
+  }
+  
+  .sidebar__info {
+    margin-right: 14px;
+  }
+
+  .sidebar__year {
+    position: absolute;
+    top: 24px;
+    right: 15px;
+  }
+
+  /* Dark Mode */
+  .mode {
+    top: auto;
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  * {
+    font-size: 18px;
+  }
+  
+  sup {
+    font-size: 8px;
+  }
+  
+  a {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    padding: 30px 30px 15px 30px;
+  }
+  
+  .sidebar__name {
+    margin-bottom: 64px;
+  }
+  
+  .sidebar__name a {
+    font-size: 18px;
+  }
+  
+  .sidebar__profile {
+    margin-bottom: 32px;
+  }
+  
+  .sidebar__info {
+    margin-bottom: 16px;
+  }
+  
+  .sidebar__year sup {
+    font-size: 18px;
+  }
+  main {
+    padding: 30px 30px 15px 30px;
+  }
+  
+  /* Nav */
+  .gnb__menu {
+    margin-bottom: 64px;
+  }
+  
+  .gnb__menu li {
+    margin-right: 24px;
+  }
+}
