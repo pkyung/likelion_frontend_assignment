@@ -1,0 +1,128 @@
+/* Header */
+/* .wrap {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+} */
+
+.sidebar {
+  padding: 50px 50px 20px 50px;
+  /* height: 100vh; */
+}
+
+.sidebar__name {
+  margin-bottom: 90px;
+}
+
+.sidebar__name a {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sidebar__profile {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.sidebar__info {
+  margin-bottom: 20px;
+}
+
+.sidebar__info p:first-child {
+  margin-bottom: 10px;
+}
+
+.sidebar__paragraph p {
+  display: none;
+}
+
+.sidebar__paragraph p.active {
+  display: block;
+}
+
+.sidebar__contact {
+  text-decoration: underline;
+}
+
+.sidebar__year {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar__year sup {
+  font-size: 20px;
+}
+
+main {
+  padding: 50px 50px 20px 50px;
+}
+
+/* Nav */
+.gnb__menu {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.gnb__menu li {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.gnb__menu li.selected {
+  text-decoration: underline;
+}
+
+.gnb__menu li:last-child {
+  margin-right: 0;
+}
+
+section {
+  display: none;
+}
+
+section.show {
+  display: block;
+}
+
+/* About Me */
+.about-me__image {
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  line-height: 3em;
+}
+
+/* Mode Button */
+.mode {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.mode.active {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+body.active {
+  transition: all 0.3s ease-in-out;
+  background-color: #202430;
+  color: #fff;
+}
+
+a.active {
+  color: #fff;
+}
+
+li.active { 
+  color: #fff;
+}
